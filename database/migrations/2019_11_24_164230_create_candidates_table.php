@@ -37,9 +37,9 @@ class CreateCandidatesTable extends Migration
             $table->string('curso')->nullable();
             $table->string('escola_recente')->nullable();
             $table->string('ano_conclusao')->nullable();
-            $table->string('bio')->nullable();
-            $table->string('retrosp')->nullable();
-            $table->string('fellow')->nullable();
+            $table->text('bio')->nullable();
+            $table->text('retrosp')->nullable();
+            $table->text('fellow')->nullable();
             $table->timestamps();
 
             $table->foreign('project_id')->references('id')->on('projects');

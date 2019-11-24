@@ -47,7 +47,7 @@ class CreateProjectsTable extends Migration
             $table->string('escola_equipe')->nullable();
             $table->string('escola_modalidade')->nullable();
             $table->text('escola_sobre')->nullable();
-            $table->string('escola_links')->nullable();
+            $table->text('escola_links')->nullable();
             $table->string('escola_inicio_mes')->nullable();
             $table->string('escola_inicio_ano')->nullable();
             $table->string('parceiros')->nullable();

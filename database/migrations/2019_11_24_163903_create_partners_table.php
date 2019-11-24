@@ -18,7 +18,7 @@ class CreatePartnersTable extends Migration
             $table->unsignedBigInteger('project_id');
             $table->string('nome')->nullable();
             $table->text('link')->nullable();
-            $table->string('tipo')->nullable();
+            $table->text('tipo')->nullable();
             $table->integer('inicio_mes')->nullable();
             $table->integer('inicio_ano')->nullable();
             $table->timestamps();

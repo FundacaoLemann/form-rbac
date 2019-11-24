@@ -38,6 +38,10 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $fields = $request->all();
+        $fields['projeto_atividades'] = is_array($fields['projeto_atividades']) ? implode(', ', $fields['projeto_atividades']) : '';
+        $fields['projeto_publico'] = is_array($fields['projeto_publico']) ? implode(', ', $fields['projeto_publico']) : '';
+        $fields['projeto_espacos'] = is_array($fields['projeto_espacos']) ? implode(', ', $fields['projeto_espacos']) : '';
+        $fields['projeto_indicacao'] = is_array($fields['projeto_indicacao']) ? implode(', ', $fields['projeto_indicacao']) : '';
 
         if($request->hasFile('projeto_doc') && $request->file('projeto_doc')->isValid()) {
             $fields['projeto_doc'] = $request->projeto_doc->store('docs');
