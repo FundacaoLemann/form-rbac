@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', function(){
+    return view('login');
+});
+
+Route::get('/rubrica', function(){
+    return view('rubrica');
+});
+
+Route::resource('reviewers', 'ReviewerController');
+Route::resource('assign', 'AssignController');
+Route::resource('projects', 'ProjectController');
+
+
+// Route::resource('reviewers/{name}', 'ReviewerController@method');

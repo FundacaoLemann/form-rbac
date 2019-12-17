@@ -16,7 +16,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        return view('../projects/index');
     }
 
     /**
@@ -27,6 +27,17 @@ class ProjectController extends Controller
     public function create()
     {
         //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return view('../projects/review');
     }
 
     /**
@@ -122,16 +133,7 @@ class ProjectController extends Controller
         return response("Dados salvos com sucesso.");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.
