@@ -38,19 +38,19 @@
             <div class="collapse navbar-collapse pull-right" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#revisar">Revisar</a>
+                        <a class="nav-link" href="/projects">Painel de Revisão</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#orientacao">Orientação aos revisores</a>
+                        <a class="nav-link" href="/rubrica">Orientação aos revisores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#atribuir">Atribuir</a>
+                        <a class="nav-link" href="/assign/assign">Atribuir</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#acompanhar">Acompanhar</a>
+                        <a class="nav-link" href="/assign">Acompanhar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sair">Sair</a>
+                        <a class="nav-link" href="/login">Sair</a>
                     </li>
                 </ul>
             </div>

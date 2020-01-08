@@ -19,6 +19,7 @@ class CreateReviewersTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('state');
+            $table->string('status');
             $table->timestamps();
         });
     }

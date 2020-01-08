@@ -6,6 +6,7 @@ use App\Candidate;
 use App\Partner;
 use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
@@ -16,8 +17,35 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('../projects/index');
+        $projects = DB::table('projects')->where([
+            ['valido', '=', 1],
+            // [], preencher condicionando ao revisor
+        ])->get();
+        return view('../projects/index', compact('projects'));
+    
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    
+    public function show($id)
+    {
+        $projects = DB::table('projects')->get();
+        $partners = DB::table('partners')->where([
+            ['project_id','=', $id]
+
+        ])->get();
+        $candidates = DB::table('candidates')->where([
+            ['project_id','=', $id]
+
+        ])->get();
+        return view('../projects/review', compact('projects', 'partners', 'candidates'));
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -27,17 +55,6 @@ class ProjectController extends Controller
     public function create()
     {
         //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        return view('../projects/review');
     }
 
     /**

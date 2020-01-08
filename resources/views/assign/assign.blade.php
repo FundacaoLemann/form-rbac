@@ -82,9 +82,11 @@
         </div>
     </div>
     <div class="d-flex justify-content-center">
-        <!-- <div class="row"> -->
-            <div class="col-md-5">
-                <table class="table table-hover">
+        {{-- <form action='/asssign/update' method="POST">
+            @method('PUT') --}}
+        
+            <div class="col-md-7">
+                <table class="table table-hover table-sm">
                     <thead>
                         <tr>
                         <th scope="col"></th>
@@ -93,59 +95,76 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($projects as $project)
+                        
                         <tr>
                             <td>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                </div>
+                            </td>
+                            <td>
+                            <a href="#" data-toggle="modal" data-target="#modal-projeto<?php echo $project->id;?>">{{$project->projeto_nome}}</a>
+                            </td>
+                            <td>{{$project->departamento_estado}}</td>
+                        </tr>
+
+                        <div class="modal" id="modal-projeto<?php echo $project->id;?>" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-                            </td>
-                            <td>Inspira e expira...agora já posso criar!</td>
-                            <td>SP</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <div class="modal-body">
+                                <div class="container font-weight-bold">
+                                    Nome do projeto:	
+                                    <div class="card">
+                                        <div class="card-body font-weight-light">
+                                        {{$project->projeto_nome}}
+                                        </div>
+                                    </div>
+                                    O projeto será implementado em qual rede de ensino?
+                                    <div class="card">
+                                        <div class="card-body font-weight-light">
+                                        {{$project->projeto_rede}}
+                                        </div>
+                                    </div>
+                                    Estado da rede de ensino:
+                                    <div class="card">
+                                        <div class="card-body font-weight-light">
+                                        {{$project->departamento_estado}}
+                                        </div>
+                                    </div>
+                                    Descrição geral do projeto:
+                                    <div class="card">
+                                        <div class="card-body font-weight-light">
+                                        {{$project->projeto_descricao}}
+                                        </div>
+                                    </div>
+                                    <!-- Qual é o público alvo? Selecione todos os que fizerem sentido.
+                                    <div class="card">
+                                        <div class="card-body font-weight-light">
+                                        {{$project->projeto_publico}}
+                                    </div> -->
                                 </div>
-                            </td>
-                            <td>Projeto 2</td>
-                            <td>MG</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                </div>
-                            </td>
-                            <td>
-                            <a href="#" data-toggle="modal" data-target="#modal-projeto">Projeto 3</a>
-                            </td>
-                            <td>MG</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                </div>
-                            </td>
-                            <td>Projeto 4</td>
-                            <td>MG</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                </div>
-                            </td>
-                            <td>Projeto 5</td>
-                            <td>MG</td>
-                        </tr>
+                            </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        @endforeach
 
                     </tbody>
                 </table>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <div class="d-flex justify-content-center">
                     <div class="d-flex align-items-center">
                         <div><i class="material-icons" style="font-size:20px;">code</i></div>
@@ -153,73 +172,33 @@
                 </div>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-4">
             
-                <table class="table table-hover">
+                <table class="table table-hover table-sm">
                     <thead>
                         <tr>
                         <th scope="col"></th>
-                        <th scope="col">Revisor</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col"># Projetos</th>
+                        <th scope="col">Revisores</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            </div>
-                            </td>
-                            <td>Revisor 1</td>
-                            <td>SP</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>
+                        @foreach($reviewers as $reviewer)
+                            <tr>
+                                <td>
                                 <div class="form-group form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 </div>
-                            </td>
-                            <td>Revisor 2</td>
-                            <td>PE</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                </div>
-                            </td>
-                            <td>Revisor 3</td>
-                            <td>PE</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                </div>
-                            </td>
-                            <td>Revisor 4</td>
-                            <td>PE</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                </div>
-                            </td>
-                            <td>Revisor 5</td>
-                            <td>PE</td>
-                            <td>2</td>
-                        </tr>
+                                </td>
+                                <td>{{$reviewer->state}} | {{$reviewer->name}} |
+                                {{$reviewer->status}}</td>
+                            </tr>
+                        @endforeach
+                        
                     </tbody>
                 </table>
 
             </div>
-        <!-- </div> -->
+        {{-- </form> --}}
     </div>
 
     <div class="container d-flex justify-content-end">
@@ -232,57 +211,9 @@
 <hr>
 
 
-
-<div class="modal" id="modal-projeto" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Título do modal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container font-weight-bold">
-            Nome do projeto:	
-            <div class="card">
-                <div class="card-body font-weight-light">
-                projeto_nome
-                </div>
-            </div>
-            O projeto será implementado em qual rede de ensino?
-            <div class="card">
-                <div class="card-body font-weight-light">
-                projeto_rede
-                </div>
-            </div>
-            Estado da rede de ensino:
-            <div class="card">
-                <div class="card-body font-weight-light">
-                departamento_estado
-                </div>
-            </div>
-            Descrição geral do projeto:
-            <div class="card">
-                <div class="card-body font-weight-light">
-                projeto_descricao
-                </div>
-            </div>
-            Qual é o público alvo? Selecione todos os que fizerem sentido.
-            <div class="card">
-                <div class="card-body font-weight-light">
-                projeto_publico
-            </div>
-        </div>
-    </div>
-    </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar mudanças</button>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- @foreach($projects as $project)
+    
+@endforeach -->
 
 
 @endsection

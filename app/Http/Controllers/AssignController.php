@@ -4,12 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Assign;
+use Illuminate\Support\Facades\DB;
 
 class AssignController extends Controller
 {
     public function index()
     {
-        return view('../assign/index');
+        $projects = DB::table('projects')->where([
+            ['valido', '=', 1],
+            // [], preencher condicionando ao filtro
+        ])->get();
+        return view('../assign/index', compact('projects'), compact('reviewers'));
     }
 
     // public function show()
@@ -20,7 +25,21 @@ class AssignController extends Controller
    
     public function show()
     {
-        return view('../assign/assign');
+        $projects = DB::table('projects')->where([
+            ['valido', '=', 1],
+            // [], preencher condicionando ao filtro
+        ])->get();
+        
+
+        // $reviewers = DB::table('reviewers')->where([
+        //     // ['status', '=', ?],
+        // ])->get();
+
+        $reviewers = DB::table('reviewers')->get();
+
+        return view('../assign/assign', compact('projects'), compact('reviewers'));
+        
+
     }
 
 

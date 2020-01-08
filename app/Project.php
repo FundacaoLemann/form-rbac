@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    protected $table = 'projects';
     /**
      * The attributes that are mass assignable.
      *
@@ -70,4 +71,9 @@ class Project extends Model
         'projeto_info_extra',
         'projeto_doc',
     ];
+
+    public function reviewers()
+    {
+        return $this->belongsToMany('App\Reviewer');
+    }
 }

@@ -36,70 +36,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">
-                                <button type="submit">Revisar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">
-                                <button type="submit">Revisar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">
-                                <button type="submit">Revisar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">
-                                <button type="submit">Revisar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">
-                                <button type="submit">Revisar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">
-                                <button type="submit">Revisar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">
-                                <button type="submit">Revisar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">
-                                <button type="submit">Revisar</button>
-                            </td>
-                        </tr>
+                        @foreach($projects as $project)
+                            <tr>
+                                <td scope="col"></td>
+                                <td scope="col">{{$project->projeto_nome}}</td>
+                                <td scope="col">Nota</td>
+                                <td scope="col">
+                                    <a href="{{url("/projects/{$project->id}")}}">Revisar</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                        
                     </tbody>
                 </table>
             </div>

@@ -135,96 +135,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Estado</td>
-                            <td scope="col">Revisor</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">Status</td>
-                            <td scope="col">
-                                <button type="submit">Atribuir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Estado</td>
-                            <td scope="col">Revisor</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">Status</td>
-                            <td scope="col">
-                                <button type="submit">Atribuir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Estado</td>
-                            <td scope="col">Revisor</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">Status</td>
-                            <td scope="col">
-                                <button type="submit">Atribuir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Estado</td>
-                            <td scope="col">Revisor</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">Status</td>
-                            <td scope="col">
-                                <button type="submit">Atribuir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Estado</td>
-                            <td scope="col">Revisor</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">Status</td>
-                            <td scope="col">
-                                <button type="submit">Atribuir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Estado</td>
-                            <td scope="col">Revisor</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">Status</td>
-                            <td scope="col">
-                                <button type="submit">Atribuir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Estado</td>
-                            <td scope="col">Revisor</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">Status</td>
-                            <td scope="col">
-                                <button type="submit">Atribuir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="col"></td>
-                            <td scope="col">Projeto</td>
-                            <td scope="col">Estado</td>
-                            <td scope="col">Revisor</td>
-                            <td scope="col">Nota</td>
-                            <td scope="col">Status</td>
-                            <td scope="col">
-                                <button type="submit">Atribuir</button>
-                            </td>
-                        </tr>
-
-
+                        @foreach($projects as $project)
+                                <tr>
+                                    <td scope="col"></td>
+                                    <td scope="col">{{$project->projeto_nome}}</td>
+                                    <td scope="col">{{$project->departamento_estado}}</td>
+                                    <td scope="col">Revisor</td>
+                                    <td scope="col">Nota</td>
+                                    <td scope="col">Status</td>
+                                    <td scope="col">
+                                        <button type="submit">Atribuir</button>
+                                    </td>
+                                </tr>
+                        @endforeach
+                        
                     </tbody>
                 </table>
             </div>

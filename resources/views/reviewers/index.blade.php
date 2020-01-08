@@ -43,7 +43,7 @@
     </div>
     <div class="container" style="width:70%">
         <div class="d-flex justify-content-end">
-            <a href='create'>
+            <a href='/reviewers/create'>
                 <i class="material-icons" style="font-size:40px;">add_circle</i>
             </a>
         </div>
