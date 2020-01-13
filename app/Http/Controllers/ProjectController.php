@@ -34,7 +34,10 @@ class ProjectController extends Controller
     
     public function show($id)
     {
-        $projects = DB::table('projects')->get();
+        $projects = DB::table('projects')->where([
+            ['id','=', $id]
+
+        ])->get();
         $partners = DB::table('partners')->where([
             ['project_id','=', $id]
 

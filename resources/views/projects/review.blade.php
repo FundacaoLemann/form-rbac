@@ -210,269 +210,81 @@
                     <div class="card-body">
                         {{$project->projeto_ajuda}}
                     </div>
+                    
 
 
                     <hr>
                     <h4>Sobre os candidatos à Fellowship</h4>
-                    </hr>
-                    {{-- @foreach($candidates as $candidate) --}}
+                    
+                    @foreach($candidates as $candidate)
             
-                        <h5>Candidato 1</h5>
+                        <h5>Candidato</h5>
+                        <hr>
 
                         <h6>Nome</h6>
-                        <div class="card-body">LUIZ CARLOS RODRIGUES DOS SANTOS</div>
+                        <div class="card-body">{{$candidate->nome}}</div>
                         <h6>Telefone</h6>
-                        <div class="card-body">47984735764</div>
+                        <div class="card-body">{{$candidate->telefone}}</div>
                         <h6>Email</h6>
-                        <div class="card-body">pixeclevelandia@hotmail.com</div>
+                        <div class="card-body">{{$candidate->email}}</div>
                         <h6>Rua</h6>
-                        <div class="card-body">RUA SERTÃO VERDE</div>
+                        <div class="card-body">{{$candidate->rua}}</div>
                         <h6>Número</h6>
-                        <div class="card-body">236</div>
+                        <div class="card-body">{{$candidate->numero}}</div>
                         <h6>Complemento</h6>
-                        <div class="card-body">casa</div>
+                        <div class="card-body">{{$candidate->compl}}</div>
                         <h6>Bairro</h6>
-                        <div class="card-body">MARGEM ESQUERDA</div>
+                        <div class="card-body">{{$candidate->bairro}}</div>
                         <h6>Cidade</h6>
-                        <div class="card-body">GASPAR</div>
+                        <div class="card-body">{{$candidate->cidade}}</div>
                         <h6>Estado</h6>
-                        <div class="card-body">SC</div>
+                        <div class="card-body">{{$candidate->estado}}</div>
                         <h6>CEP</h6>
-                        <div class="card-body">89114778</div>
+                        <div class="card-body">{{$candidate->cep}}</div>
                         <h6>Região do Brasil</h6>
-                        <div class="card-body">Sul</div>
+                        <div class="card-body">{{$candidate->regiao}}</div>
                         <h6>Website pessoal (link)</h6>
-                        <div class="card-body">pixeclevelandia@hotmail.com</div>
+                        <div class="card-body">{{$candidate->link}}</div>
                         <h6>Se você é membro da Rede Brasileira de Aprendizagem Criativa (aprendizagemcriativa.org), por favor, informe seu nome de usuário do portal</h6>
-                        <div class="card-body">No answer given</div>
+                        <div class="card-body">{{$candidate->usuario}}</div>
                         <h6>Em qual das instituições citadas na página anterior você trabalha?</h6>
-                        <div class="card-body">Prefeitura Municipal de Gaspar/SC</div>
+                        <div class="card-body">{{$candidate->instituicao}}</div>
                         <h6>Qual é seu cargo e função na instituição?</h6>
-                        <div class="card-body">Agente de Combate a Endemias</div>
+                        <div class="card-body">{{$candidate->cargo}}</div>
                         <h6>Qual será seu papel no projeto?</h6>
-                        <div class="card-body">Orientador</div>
+                        <div class="card-body">{{$candidate->papel}}</div>
                         <h6>Explique seu grau de disponibilidade para trabalhar no projeto:</h6>
-                        <div class="card-body">08 oito horas semanais</div>
+                        <div class="card-body">{{$candidate->disponibilidade}}</div>
 
                         <h6>Grau de escolaridade</h6>
-                        <div class="card-body">Pós graduação - mestrado</div>
+                        <div class="card-body">{{$candidate->escolaridade}}</div>
                         <h6>Curso ou programa</h6>
-                        <div class="card-body">Educador Ambiental</div>
+                        <div class="card-body">{{$candidate->curso}}</div>
                         <h6>Nome da instituição de ensino mais recente</h6>
-                        <div class="card-body">UNIASSELVI</div>
+                        <div class="card-body">{{$candidate->escola_recente}}</div>
                         <h6>Ano de conclusão</h6>
-                        <div class="card-body">2019</div>
+                        <div class="card-body">{{$candidate->ano_conclusao}}</div>
                         <h6>Conte um pouco mais sobre você, sua formação acadêmica e experiências profissionais.</h6>
-                        <div class="card-body">
-                            Pós graduado em Políticas Públicas Municipais, pós graduao em Educação Ambiental, pós graduando em Políticas Sociais Municipais.
-                            Atuando como Agente Ambiental, percebi o descarte de exemplares passíveis de leitura e aprendizado dentro da cidade (isto é, repasse de conhecimento para os diversos bairros), em contato com parceiros, os mesmos guardam estes para que os retire e disponibilize para a população.
-                            Conte sobre algo que você tenha aprendido, alcançado ou construído nos últimos dois anos.
-                            Com a função/atuação de Agente Ambiental, notei a carência de descarte e repasse deste exemplares para outras camadas da sociedade gasparense. A partir do momento de implantação do projeto, o mesmo tomou proporção que surpreendeu.</div>
+                        <div class="card-body">{{$candidate->bio}}</div>
+                        <h6>Conte sobre algo que você tenha aprendido, alcançado ou construído nos últimos dois anos.</h6>
+                        <div class="card-body">{{$candidate->retrosp}}</div>    
                         <h6>Por que você gostaria de participar do Desafio Aprendizagem Criativa Brasil? Que características e qualidades o tornariam um bom fellow?</h6>
-                        <div class="card-body">Temos, todos nós, exemplares que já lemos, mas não sabemos como descartar.
-                            Inúmeras pessoas, às vezes, buscam por esta edição.
-                            Despertar o prazer pela leitura, traz mais conhecimento e apreço pela vida.
-                            Quando disponibilizado em local de uso comum, todos se sentem a vontade pela retirada.
-                            Na intenção de ampliar estes espaços de leitura coletiva, a certeza de quê as Associações Comunitárias de Moradores, serão parceiras.
-                        </div>
-                    {{-- @endforeach --}}
-
-                    <h5>Candidato 2</h5>
-
-                    <h6>Nome</h6>
-                    <div class="card-body">LUIZ CARLOS RODRIGUES DOS SANTOS</div>
-                    <h6>Telefone</h6>
-                    <div class="card-body">47984735764</div>
-                    <h6>Email</h6>
-                    <div class="card-body">pixeclevelandia@hotmail.com</div>
-                    <h6>Rua</h6>
-                    <div class="card-body">RUA SERTÃO VERDE</div>
-                    <h6>Número</h6>
-                    <div class="card-body">236</div>
-                    <h6>Complemento</h6>
-                    <div class="card-body">casa</div>
-                    <h6>Bairro</h6>
-                    <div class="card-body">MARGEM ESQUERDA</div>
-                    <h6>Cidade</h6>
-                    <div class="card-body">GASPAR</div>
-                    <h6>Estado</h6>
-                    <div class="card-body">SC</div>
-                    <h6>CEP</h6>
-                    <div class="card-body">89114778</div>
-                    <h6>Região do Brasil</h6>
-                    <div class="card-body">Sul</div>
-                    <h6>Website pessoal (link)</h6>
-                    <div class="card-body">pixeclevelandia@hotmail.com</div>
-                    <h6>Se você é membro da Rede Brasileira de Aprendizagem Criativa (aprendizagemcriativa.org), por favor, informe seu nome de usuário do portal</h6>
-                    <div class="card-body">No answer given</div>
-                    <h6>Em qual das instituições citadas na página anterior você trabalha?</h6>
-                    <div class="card-body">Prefeitura Municipal de Gaspar/SC</div>
-                    <h6>Qual é seu cargo e função na instituição?</h6>
-                    <div class="card-body">Agente de Combate a Endemias</div>
-                    <h6>Qual será seu papel no projeto?</h6>
-                    <div class="card-body">Orientador</div>
-                    <h6>Explique seu grau de disponibilidade para trabalhar no projeto:</h6>
-                    <div class="card-body">08 oito horas semanais</div>
-
-                    <h6>Grau de escolaridade</h6>
-                    <div class="card-body">Pós graduação - mestrado</div>
-                    <h6>Curso ou programa</h6>
-                    <div class="card-body">Educador Ambiental</div>
-                    <h6>Nome da instituição de ensino mais recente</h6>
-                    <div class="card-body">UNIASSELVI</div>
-                    <h6>Ano de conclusão</h6>
-                    <div class="card-body">2019</div>
-                    <h6>Conte um pouco mais sobre você, sua formação acadêmica e experiências profissionais.</h6>
-                    <div class="card-body">
-                        Pós graduado em Políticas Públicas Municipais, pós graduao em Educação Ambiental, pós graduando em Políticas Sociais Municipais.
-                        Atuando como Agente Ambiental, percebi o descarte de exemplares passíveis de leitura e aprendizado dentro da cidade (isto é, repasse de conhecimento para os diversos bairros), em contato com parceiros, os mesmos guardam estes para que os retire e disponibilize para a população.
-                        Conte sobre algo que você tenha aprendido, alcançado ou construído nos últimos dois anos.
-                        Com a função/atuação de Agente Ambiental, notei a carência de descarte e repasse deste exemplares para outras camadas da sociedade gasparense. A partir do momento de implantação do projeto, o mesmo tomou proporção que surpreendeu.</div>
-                    <h6>Por que você gostaria de participar do Desafio Aprendizagem Criativa Brasil? Que características e qualidades o tornariam um bom fellow?</h6>
-                    <div class="card-body">Temos, todos nós, exemplares que já lemos, mas não sabemos como descartar.
-                        Inúmeras pessoas, às vezes, buscam por esta edição.
-                        Despertar o prazer pela leitura, traz mais conhecimento e apreço pela vida.
-                        Quando disponibilizado em local de uso comum, todos se sentem a vontade pela retirada.
-                        Na intenção de ampliar estes espaços de leitura coletiva, a certeza de quê as Associações Comunitárias de Moradores, serão parceiras.
-                    </div>
-
-                    <h5>Candidato 3</h5>
-
-                    <h6>Nome</h6>
-                    <div class="card-body">LUIZ CARLOS RODRIGUES DOS SANTOS</div>
-                    <h6>Telefone</h6>
-                    <div class="card-body">47984735764</div>
-                    <h6>Email</h6>
-                    <div class="card-body">pixeclevelandia@hotmail.com</div>
-                    <h6>Rua</h6>
-                    <div class="card-body">RUA SERTÃO VERDE</div>
-                    <h6>Número</h6>
-                    <div class="card-body">236</div>
-                    <h6>Complemento</h6>
-                    <div class="card-body">casa</div>
-                    <h6>Bairro</h6>
-                    <div class="card-body">MARGEM ESQUERDA</div>
-                    <h6>Cidade</h6>
-                    <div class="card-body">GASPAR</div>
-                    <h6>Estado</h6>
-                    <div class="card-body">SC</div>
-                    <h6>CEP</h6>
-                    <div class="card-body">89114778</div>
-                    <h6>Região do Brasil</h6>
-                    <div class="card-body">Sul</div>
-                    <h6>Website pessoal (link)</h6>
-                    <div class="card-body">pixeclevelandia@hotmail.com</div>
-                    <h6>Se você é membro da Rede Brasileira de Aprendizagem Criativa (aprendizagemcriativa.org), por favor, informe seu nome de usuário do portal</h6>
-                    <div class="card-body">No answer given</div>
-                    <h6>Em qual das instituições citadas na página anterior você trabalha?</h6>
-                    <div class="card-body">Prefeitura Municipal de Gaspar/SC</div>
-                    <h6>Qual é seu cargo e função na instituição?</h6>
-                    <div class="card-body">Agente de Combate a Endemias</div>
-                    <h6>Qual será seu papel no projeto?</h6>
-                    <div class="card-body">Orientador</div>
-                    <h6>Explique seu grau de disponibilidade para trabalhar no projeto:</h6>
-                    <div class="card-body">08 oito horas semanais</div>
-
-                    <h6>Grau de escolaridade</h6>
-                    <div class="card-body">Pós graduação - mestrado</div>
-                    <h6>Curso ou programa</h6>
-                    <div class="card-body">Educador Ambiental</div>
-                    <h6>Nome da instituição de ensino mais recente</h6>
-                    <div class="card-body">UNIASSELVI</div>
-                    <h6>Ano de conclusão</h6>
-                    <div class="card-body">2019</div>
-                    <h6>Conte um pouco mais sobre você, sua formação acadêmica e experiências profissionais.</h6>
-                    <div class="card-body">
-                        Pós graduado em Políticas Públicas Municipais, pós graduao em Educação Ambiental, pós graduando em Políticas Sociais Municipais.
-                        Atuando como Agente Ambiental, percebi o descarte de exemplares passíveis de leitura e aprendizado dentro da cidade (isto é, repasse de conhecimento para os diversos bairros), em contato com parceiros, os mesmos guardam estes para que os retire e disponibilize para a população.
-                        Conte sobre algo que você tenha aprendido, alcançado ou construído nos últimos dois anos.
-                        Com a função/atuação de Agente Ambiental, notei a carência de descarte e repasse deste exemplares para outras camadas da sociedade gasparense. A partir do momento de implantação do projeto, o mesmo tomou proporção que surpreendeu.</div>
-                    <h6>Por que você gostaria de participar do Desafio Aprendizagem Criativa Brasil? Que características e qualidades o tornariam um bom fellow?</h6>
-                    <div class="card-body">Temos, todos nós, exemplares que já lemos, mas não sabemos como descartar.
-                        Inúmeras pessoas, às vezes, buscam por esta edição.
-                        Despertar o prazer pela leitura, traz mais conhecimento e apreço pela vida.
-                        Quando disponibilizado em local de uso comum, todos se sentem a vontade pela retirada.
-                        Na intenção de ampliar estes espaços de leitura coletiva, a certeza de quê as Associações Comunitárias de Moradores, serão parceiras.
-                    </div>
-
-                    <h5>A proposta tem um quarto candidato?</h5>
-                    <div class="card-body"></div>
-
-                    <h5>Candidato 4</h5>
-
-                    <h6>Nome</h6>
-                    <div class="card-body">LUIZ CARLOS RODRIGUES DOS SANTOS</div>
-                    <h6>Telefone</h6>
-                    <div class="card-body">47984735764</div>
-                    <h6>Email</h6>
-                    <div class="card-body">pixeclevelandia@hotmail.com</div>
-                    <h6>Rua</h6>
-                    <div class="card-body">RUA SERTÃO VERDE</div>
-                    <h6>Número</h6>
-                    <div class="card-body">236</div>
-                    <h6>Complemento</h6>
-                    <div class="card-body">casa</div>
-                    <h6>Bairro</h6>
-                    <div class="card-body">MARGEM ESQUERDA</div>
-                    <h6>Cidade</h6>
-                    <div class="card-body">GASPAR</div>
-                    <h6>Estado</h6>
-                    <div class="card-body">SC</div>
-                    <h6>CEP</h6>
-                    <div class="card-body">89114778</div>
-                    <h6>Região do Brasil</h6>
-                    <div class="card-body">Sul</div>
-                    <h6>Website pessoal (link)</h6>
-                    <div class="card-body">pixeclevelandia@hotmail.com</div>
-                    <h6>Se você é membro da Rede Brasileira de Aprendizagem Criativa (aprendizagemcriativa.org), por favor, informe seu nome de usuário do portal</h6>
-                    <div class="card-body">No answer given</div>
-                    <h6>Em qual das instituições citadas na página anterior você trabalha?</h6>
-                    <div class="card-body">Prefeitura Municipal de Gaspar/SC</div>
-                    <h6>Qual é seu cargo e função na instituição?</h6>
-                    <div class="card-body">Agente de Combate a Endemias</div>
-                    <h6>Qual será seu papel no projeto?</h6>
-                    <div class="card-body">Orientador</div>
-                    <h6>Explique seu grau de disponibilidade para trabalhar no projeto:</h6>
-                    <div class="card-body">08 oito horas semanais</div>
-
-                    <h6>Grau de escolaridade</h6>
-                    <div class="card-body">Pós graduação - mestrado</div>
-                    <h6>Curso ou programa</h6>
-                    <div class="card-body">Educador Ambiental</div>
-                    <h6>Nome da instituição de ensino mais recente</h6>
-                    <div class="card-body">UNIASSELVI</div>
-                    <h6>Ano de conclusão</h6>
-                    <div class="card-body">2019</div>
-                    <h6>Conte um pouco mais sobre você, sua formação acadêmica e experiências profissionais.</h6>
-                    <div class="card-body">
-                        Pós graduado em Políticas Públicas Municipais, pós graduao em Educação Ambiental, pós graduando em Políticas Sociais Municipais.
-                        Atuando como Agente Ambiental, percebi o descarte de exemplares passíveis de leitura e aprendizado dentro da cidade (isto é, repasse de conhecimento para os diversos bairros), em contato com parceiros, os mesmos guardam estes para que os retire e disponibilize para a população.
-                        Conte sobre algo que você tenha aprendido, alcançado ou construído nos últimos dois anos.
-                        Com a função/atuação de Agente Ambiental, notei a carência de descarte e repasse deste exemplares para outras camadas da sociedade gasparense. A partir do momento de implantação do projeto, o mesmo tomou proporção que surpreendeu.</div>
-                    <h6>Por que você gostaria de participar do Desafio Aprendizagem Criativa Brasil? Que características e qualidades o tornariam um bom fellow?</h6>
-                    <div class="card-body">Temos, todos nós, exemplares que já lemos, mas não sabemos como descartar.
-                        Inúmeras pessoas, às vezes, buscam por esta edição.
-                        Despertar o prazer pela leitura, traz mais conhecimento e apreço pela vida.
-                        Quando disponibilizado em local de uso comum, todos se sentem a vontade pela retirada.
-                        Na intenção de ampliar estes espaços de leitura coletiva, a certeza de quê as Associações Comunitárias de Moradores, serão parceiras.
-                    </div>
+                        <div class="card-body">{{$candidate->fellow}}</div>
+                    @endforeach
 
                     <h5>Como você ouviu falar sobre o Desafio Aprendizagem Criativa Brasil?</h5>
-                    <div class="card-body">Portal da Rede Brasileira de Aprendizagem Criativa</div>
+                    <div class="card-body">{{$project->projeto_indicacao}} {{$project->projeto_indicacao_outro}}</div>
 
                     <h5>Há mais alguma informação que deveríamos saber sobre vocês ou seu projeto? Se sim, escreva abaixo:</h5>
                     <div class="card-body">
-                        Não há documento assinado pela BIBLIOTECA.
-                        Tem documento assinado pelo mantenedor do local, autorizando o uso.
+                       {{$project->projeto_info_extra}}
                     </div>
 
                     <h5>Carta de compromisso da secretaria de ensino ou mantenedor</h5>
                     <div class="card-body">
-                        20190629_165507_Burst01.jpg
+                        {{$project->projeto_doc}}
                     </div>
                 @endforeach
-
-
             </div>
             
 
@@ -491,29 +303,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="col">Diversidade Geográfica</td>
-                            <td scope="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="diversidadeGeografica" id="exampleRadios1" value="option1" checked>
-                                </div>
-                            </td>
-                            <td scope="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="diversidadeGeografica" id="exampleRadios1" value="option1">
-                                </div>
-                            </td>
-                            <td scope="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="diversidadeGeografica" id="exampleRadios1" value="option1">
-                                </div>
-                            </td>
-                            <td scope="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="diversidadeGeografica" id="exampleRadios1" value="option1">
-                                </div>
-                            </td>
-                        </tr>
                         <tr>
                             <td scope="col">Relevância</td>
                             <td scope="col">

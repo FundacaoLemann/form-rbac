@@ -143,11 +143,11 @@
                                         {{$project->projeto_descricao}}
                                         </div>
                                     </div>
-                                    <!-- Qual é o público alvo? Selecione todos os que fizerem sentido.
+                                    {{-- Qual é o público alvo? Selecione todos os que fizerem sentido.
                                     <div class="card">
                                         <div class="card-body font-weight-light">
                                         {{$project->projeto_publico}}
-                                    </div> -->
+                                    </div> --}}
                                 </div>
                             </div>
                             </div>
@@ -210,10 +210,6 @@
 
 <hr>
 
-
-<!-- @foreach($projects as $project)
-    
-@endforeach -->
 
 
 @endsection
